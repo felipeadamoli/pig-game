@@ -50,18 +50,20 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 		document.querySelector('.player-1-panel').classList.toggle('active');
 
 		document.querySelector('.dice').style.display = 'none';
-
 	}
 
 });
 
-//
-//document.querySelector("#current-" + activePlayer).innerHTML = '<em>' + dice + '<em>';
+document.querySelector('.btn-hold').addEventListener('click', function(){
+	//Add CURRENT score to GLOBAL score
+	scores[activePlayer] += roundScore;
 
-//var x = document.querySelector('#score-0').textContent;
+	// Update the score
+	document.querySelector('#score-' + activePlayer).textContent = scores	[activePlayer];
 
+	//Check if player won the game
 
-
+})
 
 
 
